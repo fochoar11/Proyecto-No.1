@@ -56,17 +56,13 @@ void loop() {
         float offset = 5.0; 
         temp += offset;
 
-        // Redondear a 1 decimal para display
+        
         temp_disp = round(temp * 10) / 10.0;
 
-        Serial.print("Valor del sensor: ");
-        Serial.print(sensor_val);
-        Serial.print(" - Milivoltios: ");
-        Serial.print(millivolts);
-        Serial.print(" - Temperatura calculada: ");
+        
         Serial.println(temp_disp);
 
-      
+        
         if (temp_disp < 22.0) {
           led_v_pwm = 255;  
           led_a_pwm = 0; 
@@ -95,8 +91,3 @@ void loop() {
   last_bot_state = reading;
 }
 
-    }
-  }
-
-  last_button_state = reading;
-}
