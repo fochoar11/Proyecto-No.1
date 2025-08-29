@@ -59,7 +59,7 @@ void loop() {
         
         temp_disp = round(temp * 10) / 10.0;
 
-        
+        Serial.print(" - Temperatura calculada: ");
         Serial.println(temp_disp);
 
         
@@ -83,11 +83,10 @@ void loop() {
         ledcWrite(1, led_a_pwm);  
         ledcWrite(2, led_r_pwm);   
 
-        delay(1000); 
+        delay(100); 
       }
     }
   }
 
   last_bot_state = reading;
 }
-
